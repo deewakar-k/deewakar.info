@@ -5,6 +5,6 @@
 @layer base {
   html,
   body {
-    @apply bg-[#131314] text-[#c9c7cd];
+    @apply bg-[#111] text-[#aaa] box-border w-full h-full;
   }
 }
