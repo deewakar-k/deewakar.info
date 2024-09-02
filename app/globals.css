@@ -5,6 +5,6 @@
 @layer base {
   html,
   body {
-    @apply bg-black text-white;
+    @apply bg-[#131314] text-[#c9c7cd];
   }
 }

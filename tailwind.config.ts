@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         mono: ["var(--font-berkeley)"],
+        light: ["var(--font-grotsek)"],
       },
     },
   },
