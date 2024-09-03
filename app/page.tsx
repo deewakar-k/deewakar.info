@@ -1,6 +1,9 @@
 import { Logo } from "@/components/image";
 import Navbar from "@/components/navbar";
 import { Projects } from "@/components/projects";
+import { Scramble } from "@/components/scramble";
+import Skills from "@/components/skills";
+import { SkillsIcons } from "@/components/skillsicons";
 import { About } from "@/data/about";
 
 export default function Home() {
@@ -16,7 +19,10 @@ export default function Home() {
           </div>
           <div>
             <h1 className="mt-10 text-xl font-bold">
-              deewakar <span className="text-xs">- student and developer</span>
+              <Scramble text="deewakar" placeholder="deewakar" />
+              <span className="text-xs">
+                [-] student and full-stack developer
+              </span>
             </h1>
           </div>
           <div className="font-mono text-xs mt-6 border-b border-white border-opacity-10 pb-12">
@@ -27,8 +33,19 @@ export default function Home() {
             <p>{About.paragraph3}</p>
           </div>
           <div className="mt-6 text-xs font-mono">
-            <h1 className="font-extrabold">projects</h1>
-            <div className="mt-8">
+            <h1 className="font-extrabold">
+              <Scramble text="skills" placeholder="skills" />
+            </h1>
+            <div className="mt-2">
+              <SkillsIcons />
+            </div>
+            <div className="mt-4">
+              <Skills />
+            </div>
+            <h1 className="font-extrabold mt-8">
+              <Scramble text="projects" placeholder="projects" />
+            </h1>
+            <div className="mt-4">
               <Projects />
             </div>
           </div>

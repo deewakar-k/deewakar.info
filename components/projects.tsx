@@ -1,70 +1,50 @@
 "use client";
-
 import { PROJECTS } from "@/data/project";
 import { Arrow } from "./svg";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { ScrambleLink } from "./scramble";
 
 export const Projects = () => {
   const [currentImage, setCurrentImage] = useState<string | null>(null);
-  const [transition, setTransition] = useState(false);
-
-  useEffect(() => {
-    if (currentImage) {
-      setTransition(true);
-      const timer = setTimeout(() => {
-        setTransition(false);
-      }, 300);
-
-      return () => clearTimeout(timer);
-    }
-  }, [currentImage]);
 
   return (
-    <div className="relative flex flex-col gap-4">
-      {PROJECTS.map((project, index) => (
-        <div
-          key={index}
-          className="relative group"
-          onMouseEnter={() => setCurrentImage(`/preview-imgs/${project.img}`)}
-          onMouseLeave={() => setCurrentImage(null)}
-        >
-          <div className="flex items-center text-[#db2777]">
-            <a
-              href={project.link}
-              target="_blank"
-              className="flex items-center"
-            >
-              <h1>{project.name}</h1>
-              <span className="pb-1">
+    <div className="flex justify-between items-start">
+      <div className="flex-grow">
+        {PROJECTS.map((project, index) => (
+          <div key={index} className="mb-4">
+            <div className="flex items-center text-[#db2777]">
+              <span
+                onMouseEnter={() =>
+                  setCurrentImage(`/preview-imgs/${project.img}`)
+                }
+                onMouseLeave={() => setCurrentImage(null)}
+              >
+                <ScrambleLink text={project.name} link={project.link} />
+              </span>
+              <span>
                 <Arrow />
               </span>
-            </a>
+            </div>
+            <h5>
+              {project.created}
+              <span className="italic"> {project.description}</span>
+            </h5>
           </div>
-          <h5>
-            {project.created}
-            <span className="italic"> {project.description}</span>
-          </h5>
-
-          <div
-            className={`fixed top-[60%] right-1/3 w-72 h-72 overflow-hidden ${
-              transition ? "transition-transform" : ""
-            } ${
-              currentImage ? "opacity-100 slide-up" : "opacity-0 slide-down"
-            } hidden md:block`}
-          >
-            {currentImage && (
-              <Image
-                src={currentImage}
-                alt="Project Preview"
-                layout="fill"
-                objectFit="cover"
-                className="w-full h-full"
-              />
-            )}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div
+        className={`w-40 h-40 -ml-[10%] -mt-[4%] relative flex-shrink-0 transition-opacity duration-300 ${currentImage ? "opacity-100" : "opacity-0"}`}
+      >
+        {currentImage && (
+          <Image
+            src={currentImage}
+            alt="Project Preview"
+            layout="fill"
+            objectFit="cover"
+          />
+        )}
+      </div>
     </div>
   );
 };

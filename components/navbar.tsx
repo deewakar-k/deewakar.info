@@ -2,34 +2,39 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ScrambleText } from "./scramble";
 
 const pathToCipher: { [key: string]: string } = {
-  "/": "72616C",
-  "/resume": "756E66",
-  "/notes": "65642E",
+  "/": "72 61 6C",
+  "/resume": "75 6E 66",
+  "/notes": "65 64 2E",
 };
 
 const Navbar = () => {
   const pathname = usePathname();
 
-  const getCipherText = (path: string) => pathToCipher[path] || "";
-
   return (
     <div className="flex justify-start gap-3 text-xs">
       <Link href="/" className="hover:text-[#db2777]">
-        <span className={pathname === "/" ? "text-[#db2777]" : ""}>
-          {pathname === "/" ? getCipherText("/") : "home"}
-        </span>
+        <ScrambleText
+          text="home"
+          cipherText={pathToCipher["/"]}
+          isActive={pathname === "/"}
+        />
       </Link>
       <Link href="/resume" className="hover:text-[#db2777]">
-        <span className={pathname === "/resume" ? "text-[#db2777]" : ""}>
-          {pathname === "/resume" ? getCipherText("/resume") : "resume"}
-        </span>
+        <ScrambleText
+          text="resume"
+          cipherText={pathToCipher["/resume"]}
+          isActive={pathname === "/resume"}
+        />
       </Link>
       <Link href="/notes" className="hover:text-[#db2777]">
-        <span className={pathname === "/notes" ? "text-[#db2777]" : ""}>
-          {pathname === "/notes" ? getCipherText("/notes") : "notes"}
-        </span>
+        <ScrambleText
+          text="notes"
+          cipherText={pathToCipher["/notes"]}
+          isActive={pathname === "/notes"}
+        />
       </Link>
     </div>
   );
