@@ -1,5 +1,6 @@
 import { Logo } from "@/components/image";
 import Navbar from "@/components/navbar";
+import { ScrambleText } from "@/components/scramble";
 
 export default function Notes() {
   return (
@@ -11,6 +12,9 @@ export default function Notes() {
           </div>
           <div className="mt-6">
             <Navbar />
+          </div>
+          <div className="mt-10 text-yellow-200">
+            <ScrambleText text="under construction!" />
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useScramble } from "use-scramble";
-import { Arrow } from "./svg";
 
 interface ScrambleProps {
   text: string;
@@ -33,8 +32,8 @@ export const ScrambleText = ({
   isActive,
 }: {
   text: string;
-  cipherText: string;
-  isActive: boolean;
+  cipherText?: string;
+  isActive?: boolean;
 }) => {
   const { ref, replay } = useScramble({
     text: isActive ? cipherText : text,
