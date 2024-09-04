@@ -5,7 +5,7 @@ export const skills = [
   },
   {
     category: "web dev",
-    skills: ["React", "Tailwind CSS", "Node.js", "Express.js"],
+    skills: ["Next", "Tailwind CSS", "Node.js", "Express.js"],
   },
   {
     category: "databases",
