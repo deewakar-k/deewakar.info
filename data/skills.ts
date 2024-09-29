@@ -1,11 +1,11 @@
 export const skills = [
   {
     category: "programming languages",
-    skills: ["TypeScript", "C/C++", "Python", "Bash"],
+    skills: ["TypeScript", "C/C++"],
   },
   {
     category: "web dev",
-    skills: ["Next", "Tailwind CSS", "Node.js", "Express.js"],
+    skills: ["Next", "Tailwind CSS", "Express.js"],
   },
   {
     category: "databases",

@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+
   html,
   body {
-    @apply bg-[#111] text-[#aaa] box-border w-full h-full;
+    @apply bg-white text-black box-border w-full h-full;
   }
 }
