@@ -1,25 +1,8 @@
 import "./globals.css";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google"
+import { Navbar } from "./ui/navbar";
 
-const berkeley = localFont({
-  src: [
-    {
-      path: "../public/fonts/BerkeleyMonoRegular.woff2",
-      weight: "100",
-    },
-  ],
-  variable: "--font-berkeley",
-});
-
-const grotesk = localFont({
-  src: [
-    {
-      path: "../public/fonts/FoundersGrotesk-Light.woff2",
-      weight: "400",
-    },
-  ],
-  variable: "--font-grotsek",
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "deewakar kumar",
@@ -37,9 +20,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${berkeley.variable} ${grotesk.variable} font-mono`}
+      className={`${inter.className} antialiased`}
     >
-      <body>{children}</body>
+      <body className="app-width px-8 py-16 sm:px-0 flex flex-col gap-24">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
