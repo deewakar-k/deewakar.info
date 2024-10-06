@@ -14,10 +14,10 @@ export default function Home() {
       </section>
       <section className="flex flex-col gap-3 mt-8">
         <span>
-          I'm a full stack developer and student passionate about computer science and building high-quality web apps.
+          I&apos;m a full stack developer and student passionate about computer science and building high-quality web apps.
         </span>
         <span>
-          I focus on delivering exceptional user experiences, adapting to the needs of each project with ease—whether it's Next.js or React, or whatever fits best.
+          I focus on delivering exceptional user experiences, adapting to the needs of each project with ease—whether it&apos;s Next.js or React, or whatever fits best.
         </span>
         <span>
           I work with a variety of programming languages, including<span className=" font-bold"> TypeScript</span>, C,<span className="font-bold"> Rust</span>, and Python.
