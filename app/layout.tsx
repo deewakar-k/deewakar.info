@@ -5,7 +5,7 @@ import { Navbar } from "./ui/navbar";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "deewakar kumar",
+  title: "deewakar",
   description: "portfolio",
   icons: {
     icon: "/deewakar.png",

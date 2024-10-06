@@ -7,7 +7,7 @@ export const Navbar = () => {
         <Link href='/'>home</Link>
         <Link href='/projects'>projects</Link>
         <Link href='/notes'>notes</Link>
-        <Link href='/cv'>cv</Link>
+        <Link href='https://read.cv/dazai' target="_blank">cv</Link>
       </nav>
     </main>
   )

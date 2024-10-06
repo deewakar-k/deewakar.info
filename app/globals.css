@@ -11,6 +11,14 @@
   body {
     @apply bg-white text-black box-border w-full h-full;
   }
+
+  h1 {
+    @apply text-xl font-medium
+  }
+
+  span {
+    @apply text-[#333333]
+  }
 }
 
 @layer utilities {
@@ -19,6 +27,7 @@
     @apply max-w-full;
     @apply w-[var(--app-width)];
   }
+
 
   .clickable {
     @apply underline cursor-pointer;
