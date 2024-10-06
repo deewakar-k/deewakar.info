@@ -7,7 +7,7 @@ export default function Projects() {
         <ul key={index} className="max-w-sm">
           <li className="mb-8 hover-bg">
             <a href={project.link}>
-              <h1>{project.name}</h1>
+              <p>{project.name}</p>
               <span className="text-details">{project.created} {project.description}</span>
             </a>
           </li>

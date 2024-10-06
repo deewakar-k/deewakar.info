@@ -24,7 +24,7 @@ export default function Home() {
         </span>
       </section>
       <section className="flex justify-center items-center">
-        <div className="border border-black p-2">
+        <div className="inline-block border border-black p-2">
           <Art />
         </div>
       </section>
