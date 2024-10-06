@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-12">
       <section>
-        <h1>hi, i'm deewakar</h1>
+        <h1>hi, i&apos;m deewakar</h1>
         <p className="text-details text-md flex items-center gap-1">
           <span>crafting</span> <a href="https://march.cat/" target="_blank" className="clickable text-black">march</a>
         </p>
